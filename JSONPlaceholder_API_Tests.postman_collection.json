@@ -1,0 +1,202 @@
+{
+  "info": {
+    "name": "JSONPlaceholder API Tests",
+    "description": "API testing suite for Software Quality Assurance Project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://jsonplaceholder.typicode.com"
+    }
+  ],
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get All Users",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', () => {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Response is JSON', () => {",
+                  "    pm.response.to.be.json;",
+                  "});",
+                  "",
+                  "pm.test('Users array not empty', () => {",
+                  "    const users = pm.response.json();",
+                  "    pm.expect(users).to.be.an('array');",
+                  "    pm.expect(users.length).to.be.greaterThan(0);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/users"
+          }
+        },
+        {
+          "name": "Get User by ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', () => {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('User has required fields', () => {",
+                  "    const user = pm.response.json();",
+                  "    pm.expect(user).to.have.property('id');",
+                  "    pm.expect(user).to.have.property('name');",
+                  "    pm.expect(user).to.have.property('email');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/users/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Get All Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', () => {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Posts array has 100 items', () => {",
+                  "    const posts = pm.response.json();",
+                  "    pm.expect(posts).to.be.an('array');",
+                  "    pm.expect(posts.length).to.equal(100);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{baseUrl}}/posts"
+          }
+        },
+        {
+          "name": "Create Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 201', () => {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "pm.test('Post created with ID', () => {",
+                  "    const post = pm.response.json();",
+                  "    pm.expect(post).to.have.property('id');",
+                  "    pm.expect(post.title).to.equal('Test Title');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Test Title\",\n  \"body\": \"Test body\",\n  \"userId\": 1\n}"
+            },
+            "url": "{{baseUrl}}/posts"
+          }
+        },
+        {
+          "name": "Update Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', () => {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Post updated', () => {",
+                  "    const post = pm.response.json();",
+                  "    pm.expect(post.title).to.equal('Updated Title');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 1,\n  \"title\": \"Updated Title\",\n  \"body\": \"Updated body\",\n  \"userId\": 1\n}"
+            },
+            "url": "{{baseUrl}}/posts/1"
+          }
+        },
+        {
+          "name": "Delete Post",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.test('Status is 200', () => {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Delete successful', () => {",
+                  "    // JSONPlaceholder returns empty object",
+                  "    pm.response.to.be.ok;",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{baseUrl}}/posts/1"
+          }
+        }
+      ]
+    }
+  ]
+} 
