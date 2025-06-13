@@ -1,4 +1,4 @@
-# Yazılım Kalite Güvencesi - Test Otomasyon Projesi Raporu
+# Yazılım Kalite Güvence Temelleri - Test Otomasyon Projesi Raporu
 
 ## 1. Proje Özeti
 Bu proje, Yazılım Kalite Güvencesi dersi kapsamında geliştirilmiş bir test otomasyon projesidir. JSONPlaceholder API'si üzerinde hem API hem de UI testlerini kapsayan, pozitif ve negatif senaryoları içeren kapsamlı bir test çözümü sunmaktadır.
