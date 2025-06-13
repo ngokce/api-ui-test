@@ -156,3 +156,9 @@ yazılımkalite/
 
 ## 9. Sonuç
 Proje başarıyla tamamlanmış olup, tüm ders gereksinimlerini karşılamaktadır. 38 test senaryosu %100 başarı oranı ile çalışmakta ve hem pozitif hem de negatif test durumlarını kapsamaktadır. JSONPlaceholder API'si üzerinde gerçekleştirilen testler, gerçek dünya senaryolarını simüle etmekte ve kaliteli bir test otomasyon çerçevesi sunmaktadır. 
+
+
+**GRUP ÜYELERİ**
+-Bekir Başar NOYAN
+-Elif Gökçe ÜNVER
+-Muhammet Emin ANLAR
