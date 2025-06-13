@@ -97,8 +97,8 @@ collecting ... collected 38 items
 - **Başarılı Testler**: 38 ✅
 - **Başarısız Testler**: 0 ❌
 - **Başarı Oranı**: %100
-- **Pozitif Testler: 25
-- **Negatif Testler: 13
+- **Pozitif Testler**: 25
+- **Negatif Testler**: 13
 - **Çalışma Süresi**: 56.00 saniye
 
 ### 5.3 Test Dağılımı
@@ -147,13 +147,12 @@ yazılımkalite/
 └── PROJE_RAPORU.md          # Bu rapor
 ```
 
-## 8. Ders Gereksinimlerine Uygunluk
+## 8. Gereksinimlere Uygunluk
 
 ✅ **API ve UI testleri aynı uygulama üzerinde**: JSONPlaceholder hem API hem web arayüzü  
 ✅ **Pozitif ve negatif test senaryoları**: 23 pozitif, 15 negatif senaryo  
 ✅ **Kapsamlı test coverage**: CRUD operasyonları, validasyonlar, hata durumları  
 ✅ **Detaylı raporlama**: HTML ve konsol raporları  
-✅ **Profesyonel kod yapısı**: Modüler tasarım, helper fonksiyonlar  
 
 ## 9. Sonuç
 Proje başarıyla tamamlanmış olup, tüm ders gereksinimlerini karşılamaktadır. 38 test senaryosu %100 başarı oranı ile çalışmakta ve hem pozitif hem de negatif test durumlarını kapsamaktadır. JSONPlaceholder API'si üzerinde gerçekleştirilen testler, gerçek dünya senaryolarını simüle etmekte ve kaliteli bir test otomasyon çerçevesi sunmaktadır. 
