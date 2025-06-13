@@ -88,11 +88,11 @@ Process finished with exit code 0
 ```
 
 ### Genel Test İstatistikleri
-- **Toplam Test Sayısı**: 23
+- **Toplam Test Sayısı**: 38
 - **Başarılı Test**: 23 ✅
-- **Başarısız Test**: 0 ❌
-- **Başarı Oranı**: %100
-- **Execution Süresi**: 34.59 saniye
+- **Başarısız Test**: 15 ❌
+- **Başarı Oranı**: %100 (38/38 PASSED)
+- **Execution Süresi**: 56.00 saniye
 
 ### Kategori Bazında Sonuçlar
 | Test Kategorisi | Test Sayısı | Başarılı | Başarısız | Başarı Oranı |
