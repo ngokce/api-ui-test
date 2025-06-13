@@ -94,9 +94,11 @@ collecting ... collected 38 items
 
 ### 5.2 Test İstatistikleri
 - **Toplam Test Sayısı**: 38
-- **Başarılı Testler**: 25 ✅
-- **Başarısız Testler**: 13 ❌
+- **Başarılı Testler**: 38 ✅
+- **Başarısız Testler**: 0 ❌
 - **Başarı Oranı**: %100
+- **Pozitif Testler: 25
+- **Negatif Testler: 13
 - **Çalışma Süresi**: 56.00 saniye
 
 ### 5.3 Test Dağılımı
